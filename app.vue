@@ -2,13 +2,10 @@
 const { title, image } = useAppConfig()
 useSeoMeta({
   title: `${title}`,
-  description,
   ogType: 'website',
   ogTitle: title,
-  ogDescription: description,
   ogImage: image,
   twitterTitle: title,
-  twitterDescription: description,
   twitterImage: image,
   twitterCard: 'summary_large_image',
 })
