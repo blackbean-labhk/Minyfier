@@ -18,7 +18,7 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/icon.png',
+      href: '/icon-192.png',
     },
   ],
 })
