@@ -6,6 +6,7 @@ const links = ref([])
 const limit = 24
 let cursor = ''
 let listComplete = false
+const searchSlug = ref('')
 
 async function getLinks() {
   const data = await useAPI('/api/link/list', {
@@ -25,6 +26,23 @@ const { isLoading } = useInfiniteScroll(
   { distance: 150, interval: 1000, canLoadMore: () => !listComplete },
 )
 
+async function searchLink() {
+  if (!searchSlug.value) return
+
+  try {
+    const data = await useAPI(`/api/link/query`, {
+      query: {
+        slug: searchSlug.value,
+      },
+    })
+    links.value = [data] // Replace the list with the search result
+    listComplete = true // Assume search result is complete
+  } catch (error) {
+    console.error('Link not found', error)
+    links.value = [] // Clear the list if not found
+  }
+}
+
 function updateLinkList(link, type) {
   if (type === 'edit') {
     const index = links.value.findIndex(l => l.id === link.id)
@@ -42,6 +60,15 @@ function updateLinkList(link, type) {
 
 <template>
   <main class="space-y-6">
+    <div class="flex items-center space-x-2">
+      <input
+        v-model="searchSlug"
+        type="text"
+        placeholder="Search by slug"
+        class="border p-2"
+      />
+      <button @click="searchLink" class="bg-blue-500 text-white p-2">Search</button>
+    </div>
     <DashboardNav>
       <DashboardLinksEditor @update:link="updateLinkList" />
     </DashboardNav>
