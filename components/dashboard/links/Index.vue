@@ -65,14 +65,9 @@ function updateLinkList(link, type) {
         v-model="searchSlug"
         type="text"
         placeholder="Search by slug"
-        class="rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm"
+        class="border p-2"
       />
-      <button 
-        @click="searchLink" 
-        class="inline-flex items-center rounded-md border border-transparent bg-primary-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
-      >
-        Search
-      </button>
+      <button @click="searchLink" class="bg-zinc-800 text-white p-2">Search</button>
     </div>
     <DashboardNav>
       <DashboardLinksEditor @update:link="updateLinkList" />
