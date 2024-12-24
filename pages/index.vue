@@ -32,11 +32,11 @@
 export default {
   methods: {
     goToMinyfy() {
-      window.location.href = 'https://minyfy.subwaymusician.xyz';
+      window.location.href = 'https://minyfy.minyvinyl.com/';
     },
     goToCreateEPK() {
       // Replace with the appropriate URL for creating an EPK
-      window.location.href = 'https://miny.subwaymusician.xyz';
+      window.location.href = 'https://rapidconnect.minyvinyl.com/';
     },
   },
 };
