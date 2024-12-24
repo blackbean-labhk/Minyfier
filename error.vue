@@ -9,7 +9,7 @@ import errorImage from './assets/images/404.svg?raw'
       <img
         src="/icon.png"
         alt="Minyfier Icon"
-        class="w-32 h-32 mb-6"
+        class="w-56 h-56 mb-6"
       />
 
       <!-- Message -->
