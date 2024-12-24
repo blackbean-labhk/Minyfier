@@ -4,10 +4,28 @@ import errorImage from './assets/images/404.svg?raw'
 
 <template>
   <NuxtLayout name="default">
-    <a
-      class="w-full h-full max-w-[600px] mx-auto flex items-center justify-center [&_svg]:w-full"
-      href="/"
-      v-html="errorImage"
-    />
+    <div class="w-full h-full max-w-[600px] mx-auto flex flex-col items-center justify-center text-center">
+     
+      <!-- Message -->
+      <p class="text-lg font-semibold mb-4 text-gray-800">
+        Oops! Looks like you took a wrong turn.
+      </p>
+
+      <!-- Buttons -->
+      <div class="flex gap-4">
+        <a
+          href="https://minyfy.minyvinyl.com/makeaminy"
+          class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition-colors"
+        >
+          Create a Mixtape
+        </a>
+        <a
+          href="https://rapidconnect.minyvinyl.com/"
+          class="px-6 py-3 bg-green-600 text-white font-medium rounded-lg shadow-md hover:bg-green-700 transition-colors"
+        >
+          Create an EPK
+        </a>
+      </div>
+    </div>
   </NuxtLayout>
 </template>
