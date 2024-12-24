@@ -5,7 +5,13 @@ import errorImage from './assets/images/404.svg?raw'
 <template>
   <NuxtLayout name="default">
     <div class="w-full h-full max-w-[600px] mx-auto flex flex-col items-center justify-center text-center">
-     
+      <!-- Error Image -->
+      <img
+        src="/icon.png"
+        alt="Minyfier Icon"
+        class="w-32 h-32 mb-6"
+      />
+
       <!-- Message -->
       <p class="text-lg font-semibold mb-4 text-gray-800">
         Oops! Looks like you took a wrong turn.

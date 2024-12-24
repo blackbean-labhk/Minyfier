@@ -9,7 +9,7 @@ onMounted(() => {
 
 <template>
   <section class="md:pt-6">
-    <div class="container flex flex-col items-center py-8 mx-auto sm:flex-row">
+    <div class="container flex items-center py-6 justify-between mx-auto flex-row">
       <a
         href="/"
         class="text-xl font-black leading-none text-gray-900 select-none dark:text-gray-100 logo"
@@ -18,7 +18,7 @@ onMounted(() => {
       <img
         src="/icon.png"
         alt="Minyfier Icon"
-        class="w-8 h-8 ml-4 sm:ml-4 sm:pl-4"
+        class="w-8 h-8 ml-4"
       />
     </div>
   </section>
