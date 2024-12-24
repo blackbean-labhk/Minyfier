@@ -8,22 +8,23 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="md:pt-6">
-    <div class="container flex flex-col items-center py-8 mx-auto sm:flex-row">
-      <a
-        href="/"
-        class="text-xl font-black leading-none text-gray-900 select-none dark:text-gray-100 logo"
-        title="Minyfier"
-      >Minyfier</a>
-      <img
-        src="/icon.png"
-        alt="Minyfier Icon"
-        class="w-8 h-8 ml-4 sm:ml-4 sm:pl-4"
-      />
-      <span
-        class="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start"
-      >
-      </span>
-    </div>
-  </section>
+  <section className="md:pt-6">
+      <div className="container mx-auto py-8">
+        <div className="flex justify-between items-center">
+          <a
+            href="/"
+            className="text-xl font-black leading-none text-gray-900 select-none dark:text-gray-100 logo"
+            title="Minyfier"
+          >
+            Minyfier
+          </a>
+          
+          <img
+            src="/icon.png"
+            alt="Minyfier Icon"
+            className="w-8 h-8"
+          />
+        </div>
+      </div>
+    </section>
 </template>
